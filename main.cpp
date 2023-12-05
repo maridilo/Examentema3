@@ -26,6 +26,9 @@ public:
     void insert(std::string name, variant value) {
         vars.insert(std::pair<std::string, variant>(name, value));
     }
+    void remove(std::string name) {
+        vars.erase(name);
+    }
     // Busqueda de simbolos
 int environment::lookup(const std::string& name) {
     auto it = vars.find(name);
@@ -60,5 +63,35 @@ int environment::lookup(const std::string& name) {
     }
 };
 
+int main() {
+    environment env;
+
+    // Ejemplo de integración con variant
+    variant intValue;
+    intValue.t = variant::INT;
+    intValue.intValue = 42;
+
+    env.insert("myInt", intValue);
+
+    if (env.lookup("myInt")) {
+        variant retrievedValue = env.get("myInt");
+
+        // Ahora, puedes manejar retrievedValue según su tipo
+        switch (retrievedValue.t) {
+            case variant::INT:
+                std::cout << "Retrieved INT value: " << retrievedValue.intValue << std::endl;
+                break;
+                // Puedes agregar casos para otros tipos según sea necesario
+            default:
+                env.error("Unsupported variant type");
+        }
+    } else {
+        env.error("Variable not found");
+    }
+
+    env.show();
+
+    return 0;
+}
 
 
