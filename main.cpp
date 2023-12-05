@@ -62,6 +62,16 @@ int environment::lookup(const std::string& name) {
             std::cout << it->first << " => " << it->second << std::endl;
         }
     }
+environment gameSettings;
+gameSettings.insert("difficulty", variant("hard"));
+gameSettings.insert("player_position", variant({10, 20}));
+
+if (gameSettings.exists("difficulty")) {
+variant difficulty = gameSettings.lookup("difficulty");
+if (difficulty.to_string() == "hard") {
+// Configurar el juego para dificultad difícil
+}
+}
 };
 
 int main() {
@@ -71,6 +81,7 @@ int main() {
     env.insert("z", "hola"); // string
     env.insert("w", true); // booleano
     env.show();
+
 return 0;
 }
 
