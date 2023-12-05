@@ -73,7 +73,6 @@ if (difficulty.to_string() == "hard") {
 }
 }
 };
-
 int main() {
     environment env;
     env.insert("x", 5); // entero
@@ -81,7 +80,6 @@ int main() {
     env.insert("z", "hola"); // string
     env.insert("w", true); // booleano
     env.show();
-
 return 0;
 }
 
