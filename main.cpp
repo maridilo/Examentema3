@@ -2,8 +2,14 @@
 #include <map>
 #include <string>
 
-// Definicion de la estructura de environment
+// Definicion de la estructura de variant
+class variant {
+private:
+    enum type {INT, FLOAT, STRING, BOOL, LIST, MAP};
+    type t;
+};
 
+// Definicion de la estructura de environment
 class environment() {
 private:
     // Definicion de la estructura de variant
@@ -52,3 +58,5 @@ int environment::lookup(const std::string& name) {
         }
     }
 };
+
+
