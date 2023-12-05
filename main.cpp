@@ -64,18 +64,12 @@ int environment::lookup(const std::string& name) {
 };
 
 int main() {
-// Ejemplo de uso
     environment env;
-    env.insert("x", 10);
-    env.insert("y", 20);
-    env.insert("z", 30);
+    env.insert("x", 5);
+    env.insert("y", 3.14);
+    env.insert("z", "hola");
+    env.insert("w", true);
     env.show();
-    env.remove("y");
-    env.show();
-    env.set("x", 100);
-    env.show();
-    env.error("Error de prueba");
-
 return 0;
 }
 
