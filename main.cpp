@@ -18,6 +18,7 @@ public:
     void set(std::string name, variant value) {
         vars[name] = value;
     }
+    // Obtener simbolos
     variant get(std::string name) {
         return vars[name];
     }
