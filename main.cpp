@@ -64,34 +64,19 @@ int environment::lookup(const std::string& name) {
 };
 
 int main() {
+// Ejemplo de uso
     environment env;
-
-    // Ejemplo de integración con variant
-    variant intValue;
-    intValue.t = variant::INT;
-    intValue.intValue = 42;
-
-    env.insert("myInt", intValue);
-
-    if (env.lookup("myInt")) {
-        variant retrievedValue = env.get("myInt");
-
-        // Ahora, puedes manejar retrievedValue según su tipo
-        switch (retrievedValue.t) {
-            case variant::INT:
-                std::cout << "Retrieved INT value: " << retrievedValue.intValue << std::endl;
-                break;
-                // Puedes agregar casos para otros tipos según sea necesario
-            default:
-                env.error("Unsupported variant type");
-        }
-    } else {
-        env.error("Variable not found");
-    }
-
+    env.insert("x", 10);
+    env.insert("y", 20);
+    env.insert("z", 30);
     env.show();
+    env.remove("y");
+    env.show();
+    env.set("x", 100);
+    env.show();
+    env.error("Error de prueba");
 
-    return 0;
+return 0;
 }
 
 
