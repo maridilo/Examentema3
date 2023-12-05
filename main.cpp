@@ -66,10 +66,10 @@ int environment::lookup(const std::string& name) {
 
 int main() {
     environment env;
-    env.insert("x", 5);
-    env.insert("y", 3.14);
-    env.insert("z", "hola");
-    env.insert("w", true);
+    env.insert("x", 5); // entero
+    env.insert("y", 3.14); // real
+    env.insert("z", "hola"); // string
+    env.insert("w", true); // booleano
     env.show();
 return 0;
 }
