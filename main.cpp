@@ -15,6 +15,7 @@ private:
     // Definicion de la estructura de variant
     std::map<std::string, variant> vars;
 public:
+    // Constructor
     void set(std::string name, variant value) {
         vars[name] = value;
     }
