@@ -4,16 +4,20 @@ https://github.com/maridilo/Examentema3.git
 Parte 1: Preguntas de elección múltiple (20%)
 
 1) ¿Cuál es el propósito principal de la clase Variant en el lenguaje Tiny Lisp?
-Respuesta: b)Representar cualquier tipo de dato Lisp.
+Respuesta:
+b)Representar cualquier tipo de dato Lisp.
 
-2) ¿Qué representación se obtiene al utilizar el método to_string() en un objeto Variant?
-Respuesta: a) Una cadena de texto que representa una instancia de Variant.
+3) ¿Qué representación se obtiene al utilizar el método to_string() en un objeto Variant?
+Respuesta:
+a) Una cadena de texto que representa una instancia de Variant.
 
-3) ¿Qué función cumple el método to_json_string() en la clase Variant?
-Respuesta: b) Convierte un objeto Variant a una cadena JSON.
+5) ¿Qué función cumple el método to_json_string() en la clase Variant?
+Respuesta:
+b) Convierte un objeto Variant a una cadena JSON.
 
-4) ¿Qué función cumple el método from_json_string() en la clase Variant?
-Respuesta: a) Convierte una cadena JSON en un objeto Variant
+7) ¿Qué función cumple el método from_json_string() en la clase Variant?
+Respuesta:
+a) Convierte una cadena JSON en un objeto Variant
 
 Parte 2: Pregunta de desarrollo de código (80%):Sistema de Scripting para Motor de Videojuegos Indie
 
